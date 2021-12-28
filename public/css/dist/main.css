@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  background-color: #eeeeee;
+}
+html body header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: transparent;
+  z-index: 100000;
+}
+html body header #nav-main {
+  display: table;
+  margin: auto;
+  margin-top: 20px;
+  height: 40px;
+}
+html body header #nav-main ul {
+  float: left;
+  display: block;
+}
+html body header #nav-main ul li {
+  float: left;
+  margin-left: 20px;
+  padding: 2px;
+  list-style: none;
+}
+html body header #nav-main ul li a {
+  font-size: 20px;
+  color: #343a40;
+  font-weight: bold;
+}
+html body header #nav-main .logo {
+  float: left;
+  margin: 120px 20px 0 20px;
+  width: 250px;
+  height: 178px;
+  transition: all 1s;
+}
+html body #banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-top: -10px;
+  background-image: url("../../img/banner.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+html body #banner .conte-banner {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+html body #banner .conte-banner h1 {
+  text-align: center;
+  text-shadow: 2px 2px #eeeeee;
+}
+html body #banner .conte-banner .btn-banner {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+html body #exampleModalCenter #login {
+  display: none;
+}
+html body #exampleModalCenter #registro {
+  display: block;
+}
+html body #info .foto-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html body #info .card {
+  width: 92%;
+  margin: auto;
+  padding: 5px;
+}
+html body #info .card:hover {
+  color: #f8f9fa;
+  background-color: #343a40;
+  font-size: 30px;
+}
+html body #usuario {
+  position: relative;
+  width: 100%;
+  padding: 70px 0 30px 0;
+  background-color: #343a40;
+  text-align: center;
+}
+html body #usuario h5 {
+  width: 70%;
+  margin: auto;
+}
+html body #usuario #btn-reg {
+  animation: cambio 1s linear infinite;
+  border: none;
+  height: 90px;
+  font-size: 22px;
+  margin-top: 40px;
+}
+html body #presupuesto {
+  position: relative;
+  width: 100%;
+  background-color: #343a40;
+  padding: 20px 0 20px 0;
+}
+
+@keyframes cambio {
+  0% {
+    background-color: #007bff;
+  }
+  49% {
+    background-color: #007bff;
+  }
+  50% {
+    background-color: #28a745;
+  }
+  100% {
+    background-color: #28a745;
+  }
+}

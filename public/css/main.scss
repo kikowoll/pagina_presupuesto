@@ -1,0 +1,161 @@
+// colocres
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+$white: #fff;
+$gray: #6c757d;
+$gray-dark: #343a40;
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    body {
+        background-color: #eeeeee;
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background-color: transparent;
+            z-index: 100000;
+            #nav-main {
+                display: table;
+                margin: auto;
+                margin-top: 20px;
+                height: 40px;
+                ul {
+                    float: left;
+                    display: block;
+                    li {
+                        float: left;
+                        margin-left: 20px;
+                        padding: 2px;
+                        list-style: none;
+                        a {
+                            font-size: 20px;
+                            color: $dark;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .logo {
+                    float: left;
+                    margin: 120px 20px 0 20px;
+                    width: 250px;
+                    height: 178px;
+                    transition: all 1s;
+                }
+            }
+        }
+        #banner   {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            margin-top: -10px;
+            background-image: url("../../img/banner.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            .conte-banner {
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                h1 {
+                    text-align: center;
+                    text-shadow: 2px 2px #eeeeee;
+                }
+                .btn-banner {
+                    position: relative;
+                    width: 100%;
+                    height: 100px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+            }
+        }
+        #exampleModalCenter {
+            #login {
+                display: none;
+            }
+            #registro {
+                display: block;
+            }
+        }
+        #info {
+            .foto-info {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .card {
+                width: 92%;
+                margin: auto;
+                padding: 5px;
+                &:hover {
+                    color: $light;
+                    background-color: $dark;
+                    font-size: 30px;
+                }
+            }
+        }
+        #usuario {
+            position: relative;
+            width: 100%;
+            padding: 70px 0 30px 0;
+            background-color: $dark;
+            text-align: center;
+            h5 {
+                width: 70%;
+                margin: auto;
+            }
+            #btn-reg {
+                animation: cambio 1s linear infinite;
+                border: none;
+                height: 90px;
+                font-size: 22px;
+                margin-top: 40px;
+            }
+        }
+        #presupuesto {
+            position: relative;
+            width: 100%;
+            background-color: $dark;
+            padding: 20px 0 20px 0;
+        }
+    }
+}
+
+@keyframes cambio {
+    0%{background-color: $primary;}
+    49%{background-color: $primary;}
+    
+    50%{background-color: $success;}
+    100%{background-color: $success;}
+}

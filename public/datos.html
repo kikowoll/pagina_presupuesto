@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/dist/datos.css">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <!-- jquery -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <!-- fontawesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bg-info">
+    
+    <div class="container">
+        <h3 class="text-center mt-5">Base de Datos</h3>
+        <div class="datos">
+           <div class="conte-solapas">
+                <div class="solapas" id="solapa1">Clientes</div>
+                <div class="solapas" id="solapa2">Pedidos</div>
+           </div>
+           <div class="conte-datos">
+               <div class="conte-datos-tablas">
+                    <div class="conte-tablas" id="clientes-tablas">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header bg-primary">
+                                        <h5 class="text-white">Clientes</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form action="">
+                                          <input type="hidden" name="idd" id="idd">
+                                            <!-- nombre -->
+                                            <div class="input-group mb-1">
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text" id="basic-addon1">Nombre</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="basic-addon1">
+                                              </div>
+                                                <!-- 1 apellido -->
+                                              <div class="input-group mb-1">
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text" id="basic-addon2">1 apellido</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="primer-ape" name="primer-ape" aria-describedby="basic-addon2">
+                                              </div>
+                                                <!-- 2 apellido -->
+                                              <div class="input-group mb-1">
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text" id="basic-addon3">2 apellido</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="segundo-ape" name="segundo-ape" aria-describedby="basic-addon3">
+                                              </div>
+                                                <!-- via -->
+                                              <div class="input-group mb-1">
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text" id="basic-addon4">Via</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="via" name="via" aria-describedby="basic-addon3">
+                                              </div>
+                                              
+                                                <!-- domicilio -->
+                                              <div class="input-group mb-1">
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text" id="basic-addon4">Domicilio</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="domicilio" name="domicilio" aria-describedby="basic-addon4">
+                                              </div>
+                                            
+                                                <!-- codigo -->
+                                              <div class="input-group mb-1">
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text" id="basic-addoc">Cod. postal</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="codigo" name="codigo" aria-describedby="basic-addonc">
+                                              </div>
+
+                                               <!-- localidad -->
+                                               <div class="input-group mb-1">
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text" id="basic-addon5">Localidad</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="localidad" name="localidad" aria-describedby="basic-addon5">
+                                              </div>
+
+                                                <!-- provincia -->
+                                              <div class="input-group mb-1">
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text" id="basic-addon6">Provincia</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="provincia" name="provincia" aria-describedby="basic-addon6">
+                                              </div>
+
+                                              <!-- pais -->
+                                              <div class="input-group mb-1">
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text" id="basic-addon7">Pais</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="pais" name="pais" aria-describedby="basic-addon7">
+                                              </div>
+
+                                              <div class="row">
+                                                <div class="col-md-6">
+                                                  <button type="button" class="btn btn-primary btn-block" onclick="Guardar()"><i class="fa fa-save"></i> Guardar</button>
+                                                </div>
+                                                <div class="col-md-6">
+                                                  <button type="reset" class="btn btn-danger btn-block"><i class="fa fa-eraser"></i> Limpiar</button>
+                                                </div>
+                                              </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <table class="table table-striped table-dark">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Provincia</th>
+                                        <th scope="col">accion</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody id="myclientesTB"></tbody>
+                                  </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conte-tablas" id="reparto-tablas"></div>
+               </div>
+           </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/clientes.ajax.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
